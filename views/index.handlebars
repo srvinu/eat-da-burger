@@ -1,0 +1,23 @@
+
+<div class="col-6">
+  {{#each data}}
+    {{#unless devourit }}
+
+          <div class="alert  alert-info">
+            <strong style="float: left"> {{burgerID}} . {{burger}} </strong>
+            <button type="button" data-id="{{burgerID}}" data-bName="{{burger}}" class="btn btn-danger devourBtn">DeVour it</button>
+          </div>
+    {{/unless}}
+  {{/each}}
+</div>
+
+<div class="col-6" >
+  {{#each data}}
+    {{#if devourit }}
+            <div class="alert alert-dismissible alert-info">
+              <strong> {{burgerID}} . {{burger}} </strong>
+    {{/if}}
+    </div>
+  {{/each}}
+
+</div>
